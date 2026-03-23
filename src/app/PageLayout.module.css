@@ -1,0 +1,44 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 80px 1fr 80px;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.sideBtn {
+    background: var(--surface-highlight);
+    color: var(--text-muted);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+    border-radius: var(--radius);
+    height: 100%;
+}
+
+.sideBtnLeft {
+    transform: rotate(180deg);
+}
+
+.sideBtn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .sideBtn {
+        display: none;
+    }
+}

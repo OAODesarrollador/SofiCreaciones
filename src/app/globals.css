@@ -1,0 +1,100 @@
+@import "../styles/buttons.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap');
+
+:root {
+  --primary: #fc5000; /* Naranja Vibrante */
+  --secondary: #8440bb; /* Tono Lila Opaco / Muted Lilac */
+  --background: #EDD9F0; /* Lavanda Claro */
+  --font-brand: 'Dancing Script', cursive;
+  --surface: #FFFFFF;
+  --surface-highlight: #fcf4fc;
+  --text: #333333;
+  --text-muted: #666666;
+  
+  --radius: 5px; /* Costume Holiday House shape */
+  --font-main: "Montserrat", system-ui, -apple-system, sans-serif;
+  --font-title: "Inter", sans-serif;
+  
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.5);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.5);
+  
+  /* Layout */
+  --header-height: 70px;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--font-main);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  color: var(--secondary);
+  font-family: var(--font-title);
+  letter-spacing: -1.5px;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+/* --- CONTROL MAESTRO DE FIRMA: SOFI CREACIONES --- */
+/* Cambia estos valores para modificar el color y los efectos en TODOS LADOS */
+.texto-sofi {
+    font-family: var(--font-brand) !important;
+    color: var(--primary) !important; /* Prueba cambiar a var(--secondary) o #FF00FF */
+    text-shadow: 0px 0px 0px rgba(204, 166, 166, 0) !important; /* Efecto de sombra global */
+}

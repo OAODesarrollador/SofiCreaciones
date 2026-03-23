@@ -1,0 +1,24 @@
+=== HOJA 1: "Productos" ===
+(Copia y pega esto en la celda A1)
+id	nombre	descripcion	precio	categoria	imagen	disponible	orden
+1	Pollo al Spiedo	Con papas fritas abundantes	12000	Parrilla		TRUE	1
+2	Canelones de Verdura	Salsa mixta, porcion abundante	8500	Pastas		TRUE	2
+3	Empanada Carne	Frita cortada a cuchillo	1500	Empanadas		TRUE	3
+4	Pizza Muzzarella	Grande 8 porciones	8000	Pizzas		TRUE	4
+5	Coca Cola 1.5L	Botella	2500	Bebidas		TRUE	5
+6	Flan Casero	Con dulce de leche	3000	Postres		TRUE	6
+
+=== HOJA 2: "Combos" ===
+(Copia y pega esto en la celda A1)
+id	nombre	descripcion	precio	items_incluidos	imagen	destacado
+c1	Combo Familiar	1 Pollo + 1 Pizza + Coca 1.5L	18000	Pollo, Pizza, Coca		TRUE
+c2	Parrillada x2	Asado, Vacio, Chori, Morci	22000	Asado, Vacio		TRUE
+c3	Sandwich Mila Pack	2 Sandwiches + Papas	18000	2 Sanguches, Papas		FALSE
+
+=== HOJA 3: "Config" ===
+(Copia y pega esto en la celda A1)
+key	value
+whatsapp	5491112345678
+horario	Martes a Domingos 11:00 - 14:00 y 19:00 - 23:00
+envio_base	1000
+mensaje_bienvenida	¡Hola La Parrilla!

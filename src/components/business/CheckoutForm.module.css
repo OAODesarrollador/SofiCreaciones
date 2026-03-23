@@ -1,0 +1,456 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.25rem 0;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.sidebar {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-md);
+    height: fit-content;
+}
+
+.sidebarTitle {
+    font-weight: 800;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--surface-highlight);
+}
+
+.itemList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.itemRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.itemName {
+    flex: 1;
+}
+
+.itemQty {
+    opacity: 0.8;
+}
+
+.itemPrice {
+    font-weight: 600;
+}
+
+.form {
+    background: var(--surface);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+}
+
+.group {
+    margin-bottom: 1rem;
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.input,
+.select,
+.textarea {
+    width: 100%;
+    padding: 12px;
+    background: var(--background);
+    border: 1px solid var(--surface-highlight);
+    color: white;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.radioGroup {
+    display: flex;
+    gap: 1rem;
+}
+
+.radioLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 10px;
+    background: var(--surface-highlight);
+    border-radius: 8px;
+    flex: 1;
+}
+
+.summary {
+    margin-top: 1.25rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--surface-highlight);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.total {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-top: 1rem;
+}
+
+.submitBtn {
+    font-weight: 700;
+}
+
+.backBtn {
+}
+
+.formActions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.formActions button {
+    flex: 1;
+}
+
+.submitBtn:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.success {
+    text-align: center;
+    padding: 2rem;
+    background: var(--surface);
+    border-radius: var(--radius);
+}
+
+.whatsappBtn {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.cancelBtn {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    padding: 1rem;
+}
+
+.modalContent {
+    width: 100%;
+    max-width: 520px;
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    text-align: center;
+}
+
+.whatsappModalContent {
+    max-width: 720px;
+    text-align: left;
+    padding: 20px;
+}
+
+.whatsappModalTitle {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+}
+
+.transferMessageBox {
+    margin-top: 12px;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid var(--surface-highlight);
+    background: rgba(255, 255, 255, 0.02);
+    text-align: left;
+    white-space: pre-wrap;
+    word-break: break-word;
+    user-select: text;
+    max-height: 60vh;
+    overflow: auto;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.statusBadge {
+    display: inline-block;
+    padding: 10px 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.statusOk {
+    background: #e7f7ef;
+    color: #1e7a46;
+    border: 1px solid #bfe8cf;
+}
+
+.statusWarn {
+    background: #fff4e5;
+    color: #9a5a00;
+    border: 1px solid #ffd7a3;
+}
+
+.statusError {
+    background: #fdecea;
+    color: #a1261c;
+    border: 1px solid #f5c6cb;
+}
+
+.statusInfo {
+    background: #eef2ff;
+    color: #2f3a8f;
+    border: 1px solid #c7d2fe;
+}
+
+.modalActions {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.whatsappModalActions {
+    gap: 0.75rem;
+    align-items: stretch;
+}
+
+.whatsappModalBtn {
+    flex: 1;
+    min-height: 48px;
+    padding: 0 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+}
+
+.whatsappModalBtn.whatsappBtn {
+    margin-top: 0;
+}
+
+.transferPanel {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.transferStatus {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #2f3a8f;
+    font-weight: 600;
+}
+
+.transferGrid {
+    display: grid;
+    gap: 1rem;
+}
+
+.transferItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 12px;
+    border: 1px solid var(--surface-highlight);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.transferLabel {
+    font-weight: 700;
+    color: var(--text);
+}
+
+.transferValueRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.transferValue {
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.selectable {
+    user-select: text;
+    cursor: text;
+}
+
+.copyButton {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #6c757d;
+    color: #fff;
+    padding: 8px;
+    min-width: 38px;
+    min-height: 38px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.15s ease, filter 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyButton:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.06);
+}
+
+.copyButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.transferActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.transferActionBtn,
+.transferSecondaryBtn {
+    flex: 1;
+}
+
+.transferToast {
+    align-self: flex-end;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #1e7a46;
+    color: white;
+    font-weight: 600;
+}
+
+.mpWhatsAppPreview {
+    margin-top: 14px;
+}
+
+.copyButton:focus-visible,
+.transferActionBtn:focus-visible,
+.transferSecondaryBtn:focus-visible {
+    outline: 3px solid rgba(243, 156, 18, 0.6);
+    outline-offset: 2px;
+}
+
+@media (min-width: 980px) {
+    .container {
+        max-width: 1000px;
+    }
+
+    .layout {
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: start;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .form {
+        padding: 1.1rem;
+    }
+
+    .sidebar {
+        padding: 1rem;
+    }
+
+    .radioGroup {
+        flex-direction: column;
+    }
+
+    .formActions {
+        flex-direction: column;
+    }
+
+    .transferValueRow {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .transferValue {
+        flex: 1;
+        min-width: 0;
+        word-break: break-word;
+    }
+
+    .copyButton {
+        margin-left: auto;
+    }
+
+    .transferActions {
+        justify-content: flex-end;
+    }
+
+    .transferActionBtn,
+    .transferSecondaryBtn {
+        flex: 0 0 auto;
+        min-width: 150px;
+    }
+
+    .modalContent {
+        padding: 18px;
+    }
+}

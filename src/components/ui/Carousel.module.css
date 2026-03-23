@@ -1,0 +1,243 @@
+.carouselContainer {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 500px;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    /* Dark background for the text side */
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Image Side */
+.imageSide {
+    flex: 1;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Remove filter since text is no longer on top */
+}
+
+/* Text Side */
+.contentSide {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 60px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    color: white;
+}
+
+.title {
+    color: var(--primary);
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    text-align: left;
+    font-family: var(--font-title);
+}
+
+.description {
+    color: #e0e0e0;
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.actionRow {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: auto;
+    /* Push to bottom or just naturally flow */
+    margin-bottom: 40px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 12;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.45);
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.arrow:active {
+    transform: translateY(-50%) scale(0.96);
+}
+
+.arrowLeft {
+    left: 12px;
+}
+
+.arrowRight {
+    right: 12px;
+}
+
+/* Controls */
+.controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 12px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background: var(--primary);
+    transform: scale(1.2);
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .carouselContainer {
+        height: auto;
+        min-height: 560px;
+    }
+
+    .slide {
+        flex-direction: column;
+    }
+
+    .imageSide {
+        height: 40%;
+        flex: none;
+    }
+
+    .contentSide {
+        height: 60%;
+        flex: none;
+        padding: 30px 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .controls {
+        bottom: 10px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .arrow {
+        width: 40px;
+        height: 40px;
+        top: 30%;
+    }
+}
+
+@media (max-width: 600px) {
+    .carouselContainer {
+        min-height: 520px;
+    }
+
+    .contentSide {
+        padding: 24px 16px;
+    }
+
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+
+    .price {
+        font-size: 1.4rem;
+    }
+
+    .actionRow {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+        top: 28%;
+    }
+
+    .arrowLeft {
+        left: 8px;
+    }
+
+    .arrowRight {
+        right: 8px;
+    }
+}

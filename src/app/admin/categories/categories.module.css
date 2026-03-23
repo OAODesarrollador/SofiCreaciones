@@ -1,0 +1,164 @@
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2.2rem 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  padding: 1.1rem 1.2rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(135deg, rgba(22, 133, 154, 0.25), rgba(108, 117, 125, 0.2));
+}
+
+.header h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+  font-family: var(--font-title);
+}
+
+.actionsHeader {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.backBtn {
+  background: #6c757d !important;
+  color: #fff !important;
+  border: none;
+  padding: 0.62rem 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.backBtn:hover {
+  filter: brightness(1.08);
+}
+
+.message {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #efefef;
+  padding: 0.75rem 0.9rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.close {
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  color: inherit;
+  border-radius: 999px;
+  width: 28px;
+  height: 28px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.75rem;
+  border-radius: 10px;
+  background: #191919;
+}
+
+.name,
+.name strong,
+.name input {
+  color: #f2f2f2;
+}
+
+.name {
+  flex: 1;
+}
+
+.name input {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: #232323;
+}
+
+.rowActions {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.editBtn,
+.deleteBtn,
+.saveBtn,
+.cancelBtn {
+  border: none;
+  padding: 0.46rem 0.72rem;
+  border-radius: 8px;
+  color: #fff !important;
+  font-weight: 700;
+}
+
+.editBtn,
+.saveBtn {
+  background: var(--secondary) !important;
+}
+
+.deleteBtn {
+  background: #c93b4a !important;
+}
+
+.cancelBtn {
+  background: #6c757d !important;
+}
+
+.loading {
+  color: #e5e7eb;
+}
+
+.empty {
+  color: #c9c9c9;
+  font-style: italic;
+}
+
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actionsHeader {
+    width: 100%;
+  }
+
+  .backBtn {
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+  }
+
+  .rowActions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

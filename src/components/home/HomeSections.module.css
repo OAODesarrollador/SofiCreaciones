@@ -1,0 +1,247 @@
+.section {
+    padding: 40px 0;
+}
+
+/* Category Bubbles */
+.bubbleGrid {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.bubble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 140px;
+    cursor: pointer;
+}
+.bubbleImageWrapper {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--secondary);
+    margin-bottom: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.bubbleImageWrapper:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+}
+.bubbleImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.bubbleText {
+    font-weight: 900;
+    color: var(--text);
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: var(--font-title);
+    letter-spacing: -0.5px;
+}
+
+/* Promo Banner */
+.promoBanner {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: var(--radius);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+.promoBanner h2 {
+    font-family: var(--font-title);
+    font-weight: 900;
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+}
+
+/* Icon Grid */
+.iconGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+.iconCard {
+    background: var(--surface);
+    padding: 30px 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s;
+}
+.iconCard:hover {
+    transform: translateY(-5px);
+}
+.iconSVG { margin-bottom: 15px; color: var(--secondary) !important; }
+.iconTitle {
+    color: var(--text);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-family: var(--font-title);
+    font-weight: 900;
+    letter-spacing: -0.5px;
+}
+.iconDesc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Feature Grid */
+.featureGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    height: 480px;
+}
+.featureItem {
+    background: #ccc;
+    border-radius: var(--radius);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: white;
+    box-shadow: inset 0 -100px 100px rgba(0,0,0,0.8);
+    position: relative;
+    overflow: hidden;
+}
+.bgLabel {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    font-weight: 900;
+    letter-spacing: -1px;
+    z-index: 2;
+    font-family: var(--font-title);
+}
+.featureItem .btn {
+    z-index: 2;
+}
+
+.featureMiddle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.featureStacked1 {
+    flex: 1;
+}
+.featureStacked2 {
+    flex: 1;
+}
+
+/* Category Tiles */
+.categoryTiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.tile {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    height: 350px;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+}
+.tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+.tile:hover img {
+    transform: scale(1.08);
+}
+.tileLabel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--secondary);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+/* Newsletter */
+.newsletterSection {
+    background-color: var(--secondary);
+    padding: 60px 0;
+    margin: 40px 0;
+}
+.newsletterInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.newsletterText { color: white; flex: 1; }
+.newsletterText h2 { font-size: 2.6rem; margin-bottom: 10px; font-family: var(--font-title); font-weight: 900; letter-spacing: -1.5px; }
+.newsletterText p { font-size: 1.1rem; opacity: 0.9; }
+.newsletterForm {
+    display: flex;
+    flex: 1;
+    min-width: 300px;
+    height: 55px;
+}
+.newsletterInput {
+    flex: 1;
+    padding: 0 20px;
+    border-radius: 0;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Testimonials */
+.testimonialContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--surface);
+    padding: 50px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border-top: 6px solid var(--primary);
+}
+.stars {
+    color: var(--primary);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.review {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-bottom: 25px;
+    color: var(--text);
+    line-height: 1.6;
+}
+.author {
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .featureGrid { grid-template-columns: 1fr; height: auto; }
+    .featureMiddle { flex-direction: row; }
+    .featureStacked1, .featureStacked2 { height: 250px; }
+    .featureLeft, .featureRight { height: 300px; }
+    .newsletterInner { flex-direction: column; text-align: center; }
+    .newsletterForm { width: 100%; flex-direction: column; height: auto; gap: 10px; }
+    .newsletterInput { height: 50px; border-radius: var(--radius); }
+    .newsletterForm .btn { border-radius: var(--radius) !important; padding: 15px; }
+}

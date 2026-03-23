@@ -1,0 +1,25 @@
+{
+  "name": "la-parrilla-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.17.0",
+    "dotenv": "^17.2.3",
+    "drizzle-orm": "^0.45.1",
+    "googleapis": "^171.1.0",
+    "lucide-react": "^0.563.0",
+    "next": "^14.2.14",
+    "papaparse": "^5.5.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.8"
+  }
+}

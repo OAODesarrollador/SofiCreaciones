@@ -1,0 +1,155 @@
+.header {
+    background-color: var(--surface);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+}
+
+.topBar {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.mainHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 2.2rem;
+    color: var(--primary);
+    font-family: var(--font-brand);
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+@media (min-width: 600px) {
+    .logo span { display: inline; }
+}
+
+.searchContainer {
+    flex-grow: 1;
+    max-width: 600px;
+    display: flex;
+    border: 2px solid var(--secondary);
+    border-radius: var(--radius);
+    overflow: hidden;
+    height: 45px;
+}
+
+.searchInput {
+    flex-grow: 1;
+    border: none;
+    padding: 0 15px;
+    outline: none;
+    font-size: 1rem;
+    background: white;
+    color: var(--text);
+}
+
+.searchBtn {
+    background: var(--secondary);
+    color: white;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    border-radius: 0;
+}
+
+.searchBtn:hover {
+    background: #660066;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.iconBtn {
+    color: var(--text);
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.cartBtn {
+    position: relative;
+    background: #f5f5f5;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--primary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    height: 20px;
+    min-width: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+}
+
+.bottomNav {
+    background-color: var(--secondary);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 50px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.navLinks::-webkit-scrollbar {
+    display: none;
+}
+
+.navLinks a {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+}
+
+.navLinks a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .searchContainer {
+        display: none; /* Hide on small mobile, ideally replaced with full-width below header later */
+    }
+    .mainHeader {
+        height: 60px;
+    }
+    .logo {
+        font-size: 1.2rem;
+    }
+    .logo span {
+        display: none;
+    }
+}
