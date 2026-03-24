@@ -237,11 +237,11 @@
 
 @media (max-width: 768px) {
     .featureGrid { grid-template-columns: 1fr; height: auto; }
-    .featureMiddle { flex-direction: row; }
-    .featureStacked1, .featureStacked2 { height: 250px; }
+    .featureMiddle { flex-direction: column; }
+    .featureStacked1, .featureStacked2 { height: 300px; }
     .featureLeft, .featureRight { height: 300px; }
     .newsletterInner { flex-direction: column; text-align: center; }
-    .newsletterForm { width: 100%; flex-direction: column; height: auto; gap: 10px; }
+    .newsletterForm { width: 100%; min-width: 0; flex-direction: column; height: auto; gap: 10px; }
     .newsletterInput { height: 50px; border-radius: var(--radius); }
     .newsletterForm .btn { border-radius: var(--radius) !important; padding: 15px; }
 }
