@@ -7,7 +7,7 @@ import styles from './HomeSections.module.css';
 export function CategoryBubbles() {
     const bubbles = [
         { name: 'Disfraces', img: '/images/DisfracesBoton.jpg' },
-        { name: 'Maquillaje', img: '/images/MaquillajeBoton.webp' },
+        { name: 'Maquillajes', img: '/images/MaquillajeBoton.webp' },
         { name: 'Máscaras', img: '/images/MascarasBoton.webp' },
         { name: 'Pelucas', img: '/images/PelucasBoton.jpg' },
         { name: 'Accesorios', img: '/images/AccesoriosBoton.jpg' },

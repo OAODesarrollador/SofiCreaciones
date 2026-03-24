@@ -123,9 +123,10 @@ export async function createProduct(data) {
             image: imagen?.trim() || null,
             available: disponible,
             sortOrder: parseInt(orden) || 99
-        });
+        }).returning({ insertedId: products.id });
 
-        return { success: true, id: result.lastInsertRowid };
+        // Si existe el ID extraído de returning() lo pasamos, sino enviamos un ID temporal numérico para evitar crashes del JSON.
+        return { success: true, id: result[0]?.insertedId || 999999 };
     } catch (error) {
         console.error("Error creating product:", error);
         throw error;
